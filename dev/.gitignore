@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# База данных (если не хочешь коммитить)
+# books.db
+
+# Обложки книг (большие файлы)
+data/covers/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Виртуальное окружение
+venv/
+env/
