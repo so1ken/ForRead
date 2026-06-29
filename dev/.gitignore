@@ -5,11 +5,12 @@ __pycache__/
 *.pyd
 .Python
 
-# База данных (если не хочешь коммитить)
-# books.db
+# База данных
+books.db
 
-# Обложки книг (большие файлы)
-data/covers/
+# Обложки книг
+data/covers/*
+!data/covers/.gitkeep
 
 # IDE
 .vscode/
@@ -23,3 +24,6 @@ Thumbs.db
 # Виртуальное окружение
 venv/
 env/
+
+# Логи
+*.log
