@@ -1,0 +1,212 @@
+/* Основные стили */
+QWidget {
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
+QLabel {
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+/* Кастомный заголовок окна */
+#CustomHeader {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #1A1A2E, stop:0.5 #16213E, stop:1 #1A1A2E);
+    border-bottom: 1px solid #2A2A2A;
+}
+
+#WindowButton {
+    background-color: transparent;
+    border: none;
+    color: #AAAAAA;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+#WindowButton:hover {
+    background-color: #2A2A2A;
+    color: #FFFFFF;
+}
+
+#CloseButton {
+    background-color: transparent;
+    border: none;
+    color: #AAAAAA;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+#CloseButton:hover {
+    background-color: #E81123;
+    color: #FFFFFF;
+}
+
+/* Сайдбар - узкий */
+#Sidebar {
+    background-color: #181818;
+    border-right: 1px solid #2A2A2A;
+}
+
+#PrimaryButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #4A9EFF, stop:1 #00D4FF);
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#PrimaryButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #5AAAFF, stop:1 #10E4FF);
+}
+
+#PrimaryButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #3A8EEF, stop:1 #00C4EF);
+}
+
+/* Карточка книги */
+#BookCard {
+    background-color: #1E1E1E;
+    border-radius: 15px;
+    border: 1px solid #2A2A2A;
+}
+
+#BookCard:hover {
+    border: 1px solid #4A9EFF;
+    background-color: #252525;
+}
+
+#BookCard QLabel {
+    background-color: transparent !important;
+}
+
+#CoverLabel {
+    border-radius: 12px;
+    background-color: #2A2A2A;
+}
+
+/* Нижняя панель */
+#BottomPanel {
+    background-color: transparent;
+}
+
+#TrackerFrame {
+    background-color: #1E1E1E;
+    border-radius: 15px;
+    border: 1px solid #2A2A2A;
+}
+
+#TrackerFrame QLabel {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0px;
+    margin: 0px;
+}
+
+#TrackerProgress {
+    background-color: #2A2A2A;
+    border-radius: 6px;
+}
+
+#TrackerProgress::chunk {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #4A9EFF, stop:1 #00D4FF);
+    border-radius: 6px;
+}
+
+/* Форма добавления книги */
+#FormContainer {
+    background-color: #1E1E1E;
+    border-radius: 20px;
+    border: 1px solid #2A2A2A;
+}
+
+#FormContainer QLabel {
+    background-color: transparent !important;
+}
+
+#BackButton {
+    background-color: #2A2A2A;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #AAAAAA;
+    padding: 10px 20px;
+}
+
+#BackButton:hover {
+    background-color: #3A3A3A;
+    color: #FFFFFF;
+}
+
+/* Скроллбары */
+QScrollBar:vertical {
+    background: #2A2A2A;
+    width: 10px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #4A4A4A;
+    border-radius: 5px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #5A5A5A;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    background: #2A2A2A;
+    height: 10px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #4A4A4A;
+    border-radius: 5px;
+    min-width: 30px;
+}
+
+/* Диалоги */
+QDialog {
+    background-color: #121212;
+}
+
+QDialog QLabel {
+    background-color: transparent;
+}
+
+QMessageBox {
+    background-color: #1E1E1E;
+}
+
+QMessageBox QLabel {
+    color: #FFFFFF;
+    background-color: transparent;
+}
+
+QMessageBox QPushButton {
+    background-color: #4A9EFF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 20px;
+    min-width: 80px;
+}
+
+QMessageBox QPushButton:hover {
+    background-color: #5AAAFF;
+}
