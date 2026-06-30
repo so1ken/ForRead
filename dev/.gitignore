@@ -6,11 +6,12 @@ __pycache__/
 .Python
 
 # База данных
-books.db
+*.db
+dev/books.db
 
 # Обложки книг
-data/covers/*
-!data/covers/.gitkeep
+dev/data/covers/*
+!dev/data/covers/.gitkeep
 
 # IDE
 .vscode/
@@ -26,4 +27,5 @@ venv/
 env/
 
 # Логи
-*.log
+dev/logs/*.log
+!dev/logs/.gitkeep
