@@ -2,6 +2,7 @@ import sys
 import os
 from PyQt6.QtWidgets import QApplication
 from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QIcon  # ДОБАВИТЬ
 
 # Импортируем модули
 import ui.main_window as ui_main
@@ -23,12 +24,15 @@ def check_is_first_run():
 
 def main():
     # Инициализация БД
+    sys.stdout.reconfigure(encoding='utf-8')
     create_tables()
 
     app = QApplication(sys.argv)
     
-    # Определяем путь к файлу стилей относительно этого файла (main.py)
+    # Иконка
     base_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Определяем путь к файлу стилей относительно этого файла (main.py)
     style_path = os.path.join(base_dir, "ui", "styles.qss")
 
     # Загрузка стилей

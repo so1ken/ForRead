@@ -1,3 +1,4 @@
+import os
 from PyQt6.QtWidgets import (
     QMainWindow, QWidget, QHBoxLayout, QVBoxLayout, 
     QFrame, QLabel, QPushButton, QGridLayout, 
@@ -25,9 +26,23 @@ class MainWindow(QMainWindow):
         self.resize(self.default_size)
         self.setMinimumSize(800, 600)
         self.controller = BookController()
-        
+
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        icon_path = os.path.join(base_dir, "assets", "icon.png")
+
+        if os.path.exists(icon_path):
+            icon = QIcon(icon_path)
+            if icon.isNull():
+                print(f"Иконка не загрузилась: {icon_path}")
+            else:
+                print(f"Иконка загружена: {icon_path}")
+                self.setWindowIcon(QIcon(icon_path))
+        else:
+            print(f"Файл иконки не найден: {icon_path}")
+            
         self.setup_ui()
         self.load_books()
+        
 
     def setup_ui(self):
         central_widget = QWidget()
@@ -228,7 +243,6 @@ class MainWindow(QMainWindow):
         return page
 
     # --- НАВИГАЦИЯ И УПРАВЛЕНИЕ ПАМЯТЬЮ ---
-
     def go_to_add_book(self):
         self.main_stack.setCurrentIndex(1)
 
@@ -281,7 +295,6 @@ class MainWindow(QMainWindow):
         self.main_stack.setCurrentWidget(self.edit_book_widget)
 
     # --- ДАННЫЕ И СИГНАЛЫ ---
-    
     def on_book_added(self):
         self.load_books()
         self.go_to_library()
